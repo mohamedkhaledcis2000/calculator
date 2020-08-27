@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=1200">
+        <meta name="apple-mobile-web-app-capple" content="yes"><!--for rotation with tap or mobile -->     
+        <link href="calc.css" rel="stylesheet">
+
+        <script>     
+
+    function insert(result){
+        form.t1.value=form.t1.value+result;
+        
+    }
+            
+function tri(val){
+    x= (form.t1.value)*(3.14159/180);
+    if(val=="sin"){
+        form.t1.value=(Math.sin(x)).toFixed(1);
+    }
+    else if(val=="cos"){
+        form.t1.value=(Math.cos(x)).toFixed(1);
+    }
+    else if(val=="tan"){
+        form.t1.value=(Math.tan(x)).toFixed(1);
+    }
+}
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </script>
+        
+    </head>
+
+    <body>
+            <form name="form" class="main">
+            <section class="input-grid"><input name="t1" id="t1" style="width: 100%; height: 100%; font-size: 25px;" type="text"></section>
+           
+         
+            <input type="button" class="grid-element" name="sin" onclick="tri(sin.value)" value="sin" >
+            <input type="button" class="grid-element" name="cos" onclick="tri(cos.value)" value="cos" >
+            <input type="button" class="grid-element" name="tan" onclick="tri(tan.value)" value="tan" >
+            <input type="button" class="grid-element" onclick="t1.value='' "  value="clear" >
+
+            <input type="button" class="grid-element" name="num7" onclick="insert(num7.value)" value="7">
+            <input type="button" class="grid-element" name="num8" onclick="insert(num8.value)" value="8" >
+            <input type="button" class="grid-element" name="num9" onclick="insert(num9.value)" value="9" >
+            <input type="button" class="grid-element" name="numMul" onclick="insert(numMul.value)" value="*" >
+            <input type="button" class="grid-element" name="num4" onclick="insert(num4.value)" value="4" >
+            <input type="button" class="grid-element" name="num5" onclick="insert(num5.value)" value="5" >
+            <input type="button" class="grid-element" name="num6" onclick="insert(num6.value)" value="6" >
+            <input type="button" class="grid-element" name="numDiv" onclick="insert(numDiv.value)" value="/" >
+            <input type="button" class="grid-element" name="num1" onclick="insert(num1.value)" value="1" >
+            <input type="button" class="grid-element" name="num2" onclick="insert(num2.value)" value="2" >
+            <input type="button" class="grid-element" name="num3" onclick="insert(num3.value)" value="3" >
+            <input type="button" class="grid-element" name="numMin" onclick="insert(numMin.value)" value="-" >
+            <input type="button" class="grid-element" onclick="t1.value=eval(t1.value)" value="=" >
+            <input type="button" class="grid-element" name="num0" onclick="insert(num0.value)" value="0" >
+            <input type="button" class="grid-element" name="numDot" onclick="insert(numDot.value)" value="." >
+            <input type="button" class="grid-element" name="numAdd" onclick="insert(numAdd.value)" value="+" >
+        </form>
+        
+        <script src="calc.js"></script>
+    </body>
+</html>
